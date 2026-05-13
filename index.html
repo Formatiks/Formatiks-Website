@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Formatiks — a modular platform for structured content and workflows."
+      content="Formatiks: studenti informatici uniti per creare app e siti web di qualità."
     />
-    <title>Formatiks — Modular Content Platform</title>
+    <title>Formatiks — App e siti web dal nostro gruppo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,30 +18,38 @@
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
-    <header class="site-header">
-      <a class="logo" href="#">Formatiks</a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="#why">Why</a>
-        <a href="#faq">FAQ</a>
-        <a href="#resources">Resources</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn--ghost btn--sm" href="#download">Download</a>
-        <button
-          type="button"
-          class="hamburger"
-          id="menu-toggle"
-          aria-expanded="false"
-          aria-controls="projects-menu"
-          aria-label="Apri menu progetti"
-        >
-          <span class="hamburger__bar" aria-hidden="true"></span>
-          <span class="hamburger__bar" aria-hidden="true"></span>
-          <span class="hamburger__bar" aria-hidden="true"></span>
-        </button>
-      </div>
-    </header>
+    <div class="site-header-bar">
+      <header class="site-header">
+        <div class="header-start">
+          <button
+            type="button"
+            class="hamburger"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="projects-menu"
+            aria-label="Apri menu progetti"
+          >
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+          </button>
+          <a class="logo" href="#">Formatiks</a>
+        </div>
+        <nav class="nav" aria-label="Navigazione principale">
+          <a href="#features">Cosa facciamo</a>
+          <a href="#why">Perché Formatiks</a>
+          <a href="#faq">FAQ</a>
+          <a href="#resources">Risorse</a>
+          <button
+            type="button"
+            class="nav__btn"
+            data-open-projects-menu
+          >
+            I nostri progetti
+          </button>
+        </nav>
+      </header>
+    </div>
 
     <div
       class="menu-drawer"
@@ -54,19 +62,13 @@
         <p class="menu-drawer__title" id="menu-projects-title">I nostri progetti</p>
         <ul class="menu-drawer__list">
           <li class="menu-drawer__item" style="--i: 0">
-            <a class="menu-drawer__link" href="#">Formatiks — piattaforma</a>
+            <a class="menu-drawer__link" href="#">Pulse</a>
           </li>
           <li class="menu-drawer__item" style="--i: 1">
-            <a class="menu-drawer__link" href="#">Libreria moduli</a>
+            <a class="menu-drawer__link" href="#">SportPredix</a>
           </li>
           <li class="menu-drawer__item" style="--i: 2">
-            <a class="menu-drawer__link" href="#">WebUI</a>
-          </li>
-          <li class="menu-drawer__item" style="--i: 3">
-            <a class="menu-drawer__link" href="#">Documentazione</a>
-          </li>
-          <li class="menu-drawer__item" style="--i: 4">
-            <a class="menu-drawer__link" href="#">Community &amp; open source</a>
+            <a class="menu-drawer__link" href="#">Anozon</a>
           </li>
         </ul>
       </nav>
@@ -74,55 +76,63 @@
 
     <main>
       <section class="hero" id="download">
-        <p class="eyebrow">Modular platform</p>
+        <p class="eyebrow">Studenti informatici</p>
         <h1 class="hero__title">Formatiks</h1>
         <p class="hero__lead">
-          Structured content, reusable modules, and a calm workflow — built for
-          teams who care about clarity.
+          Siamo un gruppo di studenti informatici che ha deciso di unirsi in
+          questo progetto: creare <strong>app</strong> e <strong>siti web</strong>
+          curati, moderni e pensati per chi li usa ogni giorno. Mettiamo insieme
+          competenze diverse — dal design allo sviluppo — per dare forma alle
+          nostre idee e a quelle di chi ci sceglie.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#">Get for iOS</a>
-          <a class="btn btn--secondary" href="#">Get for macOS</a>
+          <button type="button" class="btn btn--primary" data-open-projects-menu>
+            I nostri progetti
+          </button>
+          <a class="btn btn--secondary" href="#">Entra su Discord</a>
         </div>
         <div class="hero__meta">
-          <span class="pill">No ads</span>
-          <span class="pill">Privacy-first</span>
-          <span class="pill">Open roadmap</span>
+          <span class="pill">App e siti</span>
+          <span class="pill">Lavoro di squadra</span>
+          <span class="pill">Sempre in evoluzione</span>
         </div>
       </section>
 
       <section class="section" id="features">
         <div class="section__head">
-          <h2 class="section__title">Built for momentum</h2>
+          <h2 class="section__title">Cosa ci guida</h2>
           <p class="section__subtitle">
-            The same rhythm as modern product sites: fast updates, composable
-            pieces, and zero clutter.
+            Studiare non basta: vogliamo mettere in pratica quello che impariamo,
+            rilasciare spesso e migliorare ogni progetto un passo alla volta.
           </p>
         </div>
         <div class="grid grid--4">
           <article class="card">
-            <h3 class="card__title">Frequent updates</h3>
+            <h3 class="card__title">Aggiornamenti continui</h3>
             <p class="card__text">
-              Ship improvements continuously — small releases beat big bangs.
+              Correggiamo bug, aggiungiamo funzioni e rifiniamo i dettagli: il
+              sito o l’app che consegniamo non resta fermo nel tempo.
             </p>
           </article>
           <article class="card">
-            <h3 class="card__title">Growing modules</h3>
+            <h3 class="card__title">Progetti su misura</h3>
             <p class="card__text">
-              Add capabilities over time without rewriting the core product.
+              Dal mockup al deploy, affianchiamo chi ha un’idea concreta con
+              soluzioni web e mobile costruite intorno alle sue esigenze.
             </p>
           </article>
           <article class="card">
-            <h3 class="card__title">Ad-free forever</h3>
+            <h3 class="card__title">Trasparenza</h3>
             <p class="card__text">
-              No ads, no dark patterns — a product you can recommend in good
-              conscience.
+              Niente pubblicità invasiva né scorciatoie poco chiare: ci piace un
+              lavoro che si possa spiegare e difendere con orgoglio.
             </p>
           </article>
           <article class="card">
-            <h3 class="card__title">Open source</h3>
+            <h3 class="card__title">Collaborazione aperta</h3>
             <p class="card__text">
-              Transparent development with room for community contributions.
+              Crediamo nel codice condiviso e nel confronto: feedback e
+              contributi dalla community ci aiutano a crescere tutti insieme.
             </p>
           </article>
         </div>
@@ -130,103 +140,125 @@
 
       <section class="stats section section--tight">
         <div class="stat">
-          <span class="stat__value" data-count="50">0</span>
-          <span class="stat__label">Core modules</span>
+          <span class="stat__value" data-count="3">0</span>
+          <span class="stat__label">Progetti pubblici</span>
         </div>
         <div class="stat">
-          <span class="stat__value" data-count="4000">0</span>
-          <span class="stat__label">Active users</span>
+          <span class="stat__value" data-count="3">0</span>
+          <span class="stat__label">Studenti nel gruppo</span>
         </div>
         <div class="stat stat--wide">
           <span class="stat__value stat__value--text">∞</span>
-          <span class="stat__label">Ways to compose</span>
+          <span class="stat__label">Idee da realizzare</span>
         </div>
       </section>
 
       <section class="section section--tight">
         <div class="grid grid--4">
           <article class="tile">
-            <h3 class="tile__title">Zero cost</h3>
-            <p class="tile__text">Free to start — generous limits that respect real work.</p>
+            <h3 class="tile__title">Passione, non speculazione</h3>
+            <p class="tile__text">
+              Partiamo da progetti che ci stimano: il costo lo definiamo in base
+              al lavoro, con massima chiarezza fin dall’inizio.
+            </p>
           </article>
           <article class="tile">
-            <h3 class="tile__title">Secure</h3>
-            <p class="tile__text">Minimal data collection by design.</p>
+            <h3 class="tile__title">Dati al sicuro</h3>
+            <p class="tile__text">
+              Raccogliamo solo ciò che serve e spieghiamo perché: rispetto della
+              privacy come abitudine, non come slogan.
+            </p>
           </article>
           <article class="tile">
-            <h3 class="tile__title">Extensible</h3>
-            <p class="tile__text">Plug in scripts, templates, and integrations.</p>
+            <h3 class="tile__title">Stack moderno</h3>
+            <p class="tile__text">
+              Usiamo strumenti aggiornati e buone pratiche, così il prodotto resta
+              manutenibile anche quando il team cambia.
+            </p>
           </article>
           <article class="tile">
-            <h3 class="tile__title">Modular</h3>
-            <p class="tile__text">Pick what you need — leave the rest behind.</p>
+            <h3 class="tile__title">Modulare dove serve</h3>
+            <p class="tile__text">
+              Componenti riutilizzabili e architetture chiare: costruiamo in modo
+              che ogni pezzo abbia il suo posto.
+            </p>
           </article>
         </div>
       </section>
 
       <section class="section" id="why">
         <div class="section__head">
-          <h2 class="section__title">Why choose Formatiks?</h2>
+          <h2 class="section__title">Perché Formatiks?</h2>
         </div>
         <div class="split">
           <article class="panel">
-            <h3 class="panel__title">Always evolving</h3>
+            <h3 class="panel__title">Nati in aula, cresciuti sui progetti</h3>
             <p class="panel__text">
-              Community-driven direction with steady iteration — weekly polish,
-              monthly milestones.
+              Ci siamo conosciuti tra lezioni di programmazione, hackathon e
+              nottate in laboratorio. Formatiks è il contenitore che ci permette di
+              restare uniti: stessi valori, obiettivi condivisi, tanta voglia di
+              imparare dagli errori e festeggiare i risultati.
             </p>
-            <p class="panel__note">Latest version: <strong>1.0.0</strong></p>
+            <p class="panel__note">Sito collettivo — versione <strong>1.0</strong></p>
           </article>
           <article class="panel">
-            <h3 class="panel__title">Modular design</h3>
+            <h3 class="panel__title">Dal codice al prodotto finito</h3>
             <p class="panel__text">
-              Mix and match building blocks to match your team’s workflow — not
-              ours.
+              Non ci fermiamo al “funziona sulla mia macchina”: curiamo
+              interfaccia, performance e messaggio per chi userà davvero app e
+              siti. Ogni membro porta una specialità; insieme copriamo tutta la
+              catena, dall’idea al rilascio.
             </p>
-            <p class="panel__badge">+12 new modules this month</p>
+            <p class="panel__badge">Scopri i lavori in “I nostri progetti”</p>
           </article>
         </div>
       </section>
 
       <section class="section" id="faq">
         <div class="section__head">
-          <h2 class="section__title">Frequently asked questions</h2>
+          <h2 class="section__title">Domande frequenti</h2>
         </div>
         <div class="faq" role="list">
           <details class="faq__item" open>
-            <summary class="faq__q">What is Formatiks?</summary>
+            <summary class="faq__q">Che cos’è Formatiks?</summary>
             <p class="faq__a">
-              Formatiks is a modular platform for structured content and
-              repeatable workflows — connect templates, automations, and your own
-              extensions.
+              È il nome del nostro gruppo: un collettivo di studenti
+              informatici che progetta e realizza <strong>applicazioni</strong> e
+              <strong>siti web</strong>, unendo competenze tecniche e attenzione al
+              risultato finale per clienti e community.
             </p>
           </details>
           <details class="faq__item">
-            <summary class="faq__q">What are modules?</summary>
+            <summary class="faq__q">Come è nato il progetto?</summary>
             <p class="faq__a">
-              Modules are small, composable units — templates, scripts, or
-              integrations — that extend Formatiks without bloating the core app.
+              Da un gruppo di amici e compagni di corso con la stessa passione per
+              lo sviluppo software. Abbiamo iniziato con piccoli lavori e
+              side-project, poi abbiamo deciso di dare un’identità comune e una
+              vetrina unica per tutto ciò che costruiamo insieme.
             </p>
           </details>
           <details class="faq__item">
-            <summary class="faq__q">Where can I find modules?</summary>
+            <summary class="faq__q">Dove vedo i vostri lavori?</summary>
             <p class="faq__a">
-              Browse the <a href="#">Module library</a> for curated and
-              community-built modules you can install in one tap.
+              Premi <strong>I nostri progetti</strong> (in alto o nella hero) per
+              aprire il menu con l’elenco aggiornato — ogni voce porta a un
+              progetto che stiamo curando o abbiamo pubblicato.
             </p>
           </details>
           <details class="faq__item">
-            <summary class="faq__q">Is Formatiks free?</summary>
+            <summary class="faq__q">Posso proporre una collaborazione?</summary>
             <p class="faq__a">
-              Yes — the core experience is free. Advanced team features may ship
-              later with clear, optional pricing.
+              Certo: scrivici su Discord o apri una discussione su GitHub. Valutiamo
+              idee compatibili con i nostri tempi di studio e con la qualità che
+              vogliamo offrire.
             </p>
           </details>
           <details class="faq__item">
-            <summary class="faq__q">Which platforms are supported?</summary>
+            <summary class="faq__q">Che tecnologie usate?</summary>
             <p class="faq__a">
-              Today we focus on iOS and macOS for the native clients. Web tools
-              are on the roadmap.
+              Dipende dal progetto: spesso web moderno (HTML, CSS, JavaScript),
+              strumenti per il design e, dove serve, framework e servizi cloud.
+              Le nostre app iOS sono realizzate interamente con SwiftUI.
             </p>
           </details>
         </div>
@@ -234,47 +266,49 @@
 
       <section class="section" id="resources">
         <div class="section__head">
-          <h2 class="section__title">Resources &amp; developer tools</h2>
+          <h2 class="section__title">Dove trovarci</h2>
         </div>
         <div class="grid grid--2">
           <article class="resource">
-            <h3 class="resource__title">Module library</h3>
+            <h3 class="resource__title">GitHub</h3>
             <p class="resource__lead">
-              Discover and install community modules for Formatiks.
+              Codice sorgente, issue e contributi: qui documentiamo ciò che
+              pubblichiamo e accogliamo suggerimenti da altri sviluppatori.
             </p>
             <ul class="resource__list">
-              <li>Search and filter</li>
-              <li>Frequently updated</li>
-              <li>Open for contributions</li>
+              <li>Repository dei progetti</li>
+              <li>Changelog e release</li>
+              <li>Linee guida per contribuire</li>
             </ul>
-            <a class="link-arrow" href="#">Open library</a>
+            <a class="link-arrow" href="#">Vai al profilo GitHub</a>
           </article>
           <article class="resource resource--accent">
-            <span class="resource__tag">New in v1.0.3</span>
-            <h3 class="resource__title">Formatiks WebUI</h3>
+            <span class="resource__tag">Community</span>
+            <h3 class="resource__title">Discord</h3>
             <p class="resource__lead">
-              Browser-based workspace for testing and debugging modules.
+              Il canale più veloce per fare domande, proporre idee o seguire gli
+              aggiornamenti del gruppo in tempo reale.
             </p>
             <ul class="resource__list">
-              <li>Live module testing</li>
-              <li>Real-time logs</li>
-              <li>Friendly inspector</li>
+              <li>Canali per progetto</li>
+              <li>Annunci e demo</li>
+              <li>Chat con il team</li>
             </ul>
-            <a class="link-arrow" href="#">Launch WebUI</a>
+            <a class="link-arrow" href="#">Entra nel server</a>
           </article>
         </div>
       </section>
 
       <section class="cta section">
         <div class="cta__inner">
-          <h2 class="cta__title">Join the open source community</h2>
+          <h2 class="cta__title">Costruisci con noi</h2>
           <p class="cta__text">
-            Help shape the roadmap — issues, modules, and design feedback are all
-            welcome.
+            Se ti piace il nostro modo di lavorare, seguici su GitHub e unisciti a
+            Discord: ogni messaggio, issue o pull request ci aiuta a migliorare.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#">View on GitHub</a>
-            <a class="btn btn--secondary" href="#">Join Discord</a>
+            <a class="btn btn--primary" href="#">Apri GitHub</a>
+            <a class="btn btn--secondary" href="#">Entra su Discord</a>
           </div>
         </div>
       </section>
@@ -282,14 +316,13 @@
 
     <footer class="site-footer">
       <p class="footer__brand">Formatiks</p>
-      <p class="footer__links">
-        <a href="#">Module library</a>
+        <a href="#">GitHub</a>
         <span class="dot">·</span>
-        <a href="#">WebUI</a>
-        <span class="dot">·</span>
-        <a href="#">Status</a>
+        <a href="#">Discord</a>
       </p>
-      <p class="footer__copy">© <span id="year"></span> Formatiks. All rights reserved.</p>
+      <p class="footer__copy">
+        © <span id="year"></span> Formatiks — gruppo di studenti informatici.
+      </p>
     </footer>
 
     <script src="main.js"></script>
