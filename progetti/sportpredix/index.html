@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SportPredix - simulatore di scommesse con partite e quote reali. Il progetto più grande Formatiks."
+    />
+    <title>SportPredix - Formatiks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="progetti/progetto.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="site-header-bar">
+      <header class="site-header">
+        <div class="header-start">
+          <button
+            type="button"
+            class="hamburger"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="projects-menu"
+            aria-label="Apri menu progetti"
+          >
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+          </button>
+          <a class="logo" href="index.html">Formatiks</a>
+        </div>
+        <nav class="nav" aria-label="Navigazione principale">
+          <a href="index.html#features">Cosa facciamo</a>
+          <a href="index.html#why">Perché Formatiks</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#resources">Risorse</a>
+          <button type="button" class="nav__btn" data-open-projects-menu>I nostri progetti</button>
+        </nav>
+      </header>
+    </div>
+
+    <div class="menu-drawer" id="projects-menu" aria-hidden="true" inert>
+      <button type="button" class="menu-drawer__backdrop" data-menu-close tabindex="-1" aria-label="Chiudi menu"></button>
+      <nav class="menu-drawer__panel" aria-label="I nostri progetti">
+        <p class="menu-drawer__title" id="menu-projects-title">I nostri progetti</p>
+        <ul class="menu-drawer__list">
+          <li class="menu-drawer__item" style="--i: 0">
+            <a class="menu-drawer__link" href="progetti/pulse/index.html">Pulse</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 1">
+            <a class="menu-drawer__link" href="progetti/sportpredix/index.html">SportPredix</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 2">
+            <a class="menu-drawer__link" href="progetti/anozon/index.html">Anozon</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="project-page">
+      <a class="back-link" href="index.html">Torna alla home</a>
+
+      <header class="project-hero">
+        <p class="project-hero__eyebrow">Il nostro progetto principale</p>
+        <h1 class="project-hero__title">SportPredix</h1>
+        <p class="project-hero__lead">
+          Simulatore di scommesse sportive che usa <strong>partite reali</strong> e
+          <strong>quote reali</strong>, alimentato da dati live tramite API: oltre
+          <strong>200 campionati di calcio</strong>, sistema di login, classifiche e
+          amici. &Egrave; il cuore del lavoro di squadra Formatiks.
+        </p>
+      </header>
+
+      <section class="project-section">
+        <h2>Cos&apos;&egrave; SportPredix</h2>
+        <p>
+          Non si tratta di soldi veri: SportPredix ti mette nei panni di chi gioca
+          con le quote, gestisce un bankroll virtuale e segue il calcio mondiale con
+          aggiornamenti fedeli alla realt&agrave; sportiva. L&apos;obiettivo &egrave; formare,
+          divertire e sperimentare UX e dati in un contesto sicuro.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>Funzioni principali</h2>
+        <ul class="project-list">
+          <li>
+            <strong>Partite e quote reali</strong> - dati aggiornati grazie a integrazioni
+            API cos&igrave; schedine e palinsesto rispettano ci&ograve; che succede davvero in campo.
+          </li>
+          <li>
+            <strong>Oltre 200 campionati</strong> - ampia copertura del calcio internazionale
+            per chi vuole esplorare leghe note e meno note.
+          </li>
+          <li>
+            <strong>Livelli e Pass</strong> - vari livelli di accesso (Pass) per sbloccare
+            contenuti, modalit&agrave; avanzate o vantaggi nel percorso di gioco simulato.
+          </li>
+          <li>
+            <strong>Account e social</strong> - <strong>login</strong> dedicato,
+            <strong>classifiche</strong> tra utenti e sistema <strong>amici</strong> per
+            confrontare risultati e sfide.
+          </li>
+          <li>
+            <strong>App nativa</strong> - sviluppata in Swift / SwiftUI per un&apos;esperienza
+            mobile fluida e coerente con le aspettative degli utenti iOS.
+          </li>
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2>Perch&eacute; &egrave; speciale per noi</h2>
+        <p>
+          SportPredix &egrave; il <strong>progetto pi&ugrave; grande</strong> che abbiamo portato
+          avanti insieme: tocca backend, integrazione dati, economia virtuale, UI e
+          community. Ogni release &egrave; una lezione condivisa tra studenti informatici
+          che vogliono costruire qualcosa di solido.
+        </p>
+      </section>
+
+      <div class="project-actions">
+        <a
+          class="btn btn--primary"
+          href="https://github.com/Formatiks/SportPredix"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Repository su GitHub</a
+        >
+        <a class="btn btn--secondary" href="index.html">Altri progetti</a>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

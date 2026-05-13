@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Anozon - progetto Formatiks." />
+    <title>Anozon - Formatiks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="progetti/progetto.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="site-header-bar">
+      <header class="site-header">
+        <div class="header-start">
+          <button
+            type="button"
+            class="hamburger"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="projects-menu"
+            aria-label="Apri menu progetti"
+          >
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+          </button>
+          <a class="logo" href="index.html">Formatiks</a>
+        </div>
+        <nav class="nav" aria-label="Navigazione principale">
+          <a href="index.html#features">Cosa facciamo</a>
+          <a href="index.html#why">Perché Formatiks</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#resources">Risorse</a>
+          <button type="button" class="nav__btn" data-open-projects-menu>I nostri progetti</button>
+        </nav>
+      </header>
+    </div>
+
+    <div class="menu-drawer" id="projects-menu" aria-hidden="true" inert>
+      <button type="button" class="menu-drawer__backdrop" data-menu-close tabindex="-1" aria-label="Chiudi menu"></button>
+      <nav class="menu-drawer__panel" aria-label="I nostri progetti">
+        <p class="menu-drawer__title" id="menu-projects-title">I nostri progetti</p>
+        <ul class="menu-drawer__list">
+          <li class="menu-drawer__item" style="--i: 0">
+            <a class="menu-drawer__link" href="progetti/pulse/index.html">Pulse</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 1">
+            <a class="menu-drawer__link" href="progetti/sportpredix/index.html">SportPredix</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 2">
+            <a class="menu-drawer__link" href="progetti/anozon/index.html">Anozon</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="project-page">
+      <a class="back-link" href="index.html">Torna alla home</a>
+
+      <header class="project-hero">
+        <p class="project-hero__eyebrow">Progetto</p>
+        <h1 class="project-hero__title">Anozon</h1>
+        <p class="project-hero__lead">
+          Pagina in allestimento: qui raccoglieremo presto descrizione completa, screenshot
+          e link al codice. Intanto puoi seguire l&apos;organizzazione su GitHub.
+        </p>
+      </header>
+
+      <section class="project-section">
+        <h2>Cartella di lavoro</h2>
+        <p>
+          Nella cartella <code>progetti/anozon</code> del repository del sito trovi lo
+          spazio dedicato a bozze e materiali del progetto, in linea con gli altri prodotti
+          Formatiks.
+        </p>
+      </section>
+
+      <div class="project-actions">
+        <a class="btn btn--primary" href="https://github.com/Formatiks" target="_blank" rel="noopener noreferrer"
+          >Organizzazione GitHub</a
+        >
+        <a class="btn btn--secondary" href="index.html">Altri progetti</a>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
