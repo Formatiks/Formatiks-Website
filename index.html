@@ -33,7 +33,8 @@
             <span class="hamburger__bar" aria-hidden="true"></span>
             <span class="hamburger__bar" aria-hidden="true"></span>
           </button>
-          <a class="logo" href="#">Formatiks</a>
+          <a href="#" style="display: flex;"><img src="formatiks.png" width="55" alt="Formatiks"></a>
+<!--          <a class="logo" href="#">Formatiks</a>-->
         </div>
         <nav class="nav" aria-label="Navigazione principale">
           <a href="#features">Cosa facciamo</a>
@@ -82,7 +83,7 @@
           Siamo un gruppo di studenti informatici che ha deciso di unirsi in
           questo progetto: creare <strong>app</strong> e <strong>siti web</strong>
           curati, moderni e pensati per chi li usa ogni giorno. Mettiamo insieme
-          competenze diverse - dal design allo sviluppo - per dare forma alle
+          competenze diverse, dal design allo sviluppo, per dare forma alle
           nostre idee e a quelle di chi ci sceglie.
         </p>
         <div class="hero__actions">
@@ -200,22 +201,21 @@
           <article class="panel">
             <h3 class="panel__title">Nati in aula, cresciuti sui progetti</h3>
             <p class="panel__text">
-              Ci siamo conosciuti tra lezioni di programmazione, hackathon e
-              nottate in laboratorio. Formatiks è il contenitore che ci permette di
+              Ci siamo conosciuti tra lezioni di programmazione e chiamate
+              su Discord. Formatiks è ciò che ci permette di
               restare uniti: stessi valori, obiettivi condivisi, tanta voglia di
               imparare dagli errori e festeggiare i risultati.
             </p>
-            <p class="panel__note">Sito collettivo - versione <strong>1.0</strong></p>
+<!--            <p class="panel__note">Sito collettivo - versione <strong>1.0</strong></p> -->
           </article>
           <article class="panel">
             <h3 class="panel__title">Dal codice al prodotto finito</h3>
             <p class="panel__text">
-              Non ci fermiamo al “funziona sulla mia macchina”: curiamo
-              interfaccia, performance e messaggio per chi userà davvero app e
-              siti. Ogni membro porta una specialità; insieme copriamo tutta la
-              catena, dall’idea al rilascio.
+              Non ci fermiamo al dire “a me funziona”: controlliamo
+              interfaccia, performance e messaggio per chi userà 
+              davvero le nostre app e siti. 
             </p>
-            <p class="panel__badge">Scopri i lavori in “I nostri progetti”</p>
+            <a data-open-projects-menu><p class="panel__badge link-arrow">Scopri i lavori in “I nostri progetti”</p></a>
           </article>
         </div>
       </section>
@@ -228,7 +228,7 @@
           <details class="faq__item" open>
             <summary class="faq__q">Che cos’è Formatiks?</summary>
             <p class="faq__a">
-              È il nome del nostro gruppo: un collettivo di studenti
+              È il nome del nostro gruppo: un insieme di studenti
               informatici che progetta e realizza <strong>applicazioni</strong> e
               <strong>siti web</strong>, unendo competenze tecniche e attenzione al
               risultato finale per clienti e community.
@@ -237,19 +237,18 @@
           <details class="faq__item">
             <summary class="faq__q">Come è nato il progetto?</summary>
             <p class="faq__a">
-              Da un gruppo di amici e compagni di corso con la stessa passione per
+              Da un gruppo di amici e compagni di classe con la stessa passione per
               lo sviluppo software. Abbiamo iniziato con piccoli lavori e
-              side-project, poi abbiamo deciso di dare un’identità comune e una
-              vetrina unica per tutto ciò che costruiamo insieme.
+              progetti, poi abbiamo deciso di dare un nome unico per tutto 
+              ciò che costruiamo insieme.
             </p>
           </details>
           <details class="faq__item">
             <summary class="faq__q">Dove vedo i vostri lavori?</summary>
             <p class="faq__a">
-              Premi <strong>I nostri progetti</strong> (in alto o nella hero) per
-              aprire il menu con l&apos;elenco aggiornato - ogni voce porta alla
-              <strong>pagina dedicata</strong> sul sito, con la spiegazione del progetto
-              (cartella <code>progetti/nome-progetto</code> nel repository del sito).
+              Premi <strong>I nostri progetti</strong> (in alto o nel menù a tendina) per
+              aprire il menu con l&apos;elenco aggiornato: ogni voce porta alla
+              <strong>pagina dedicata</strong> sul sito, con la spiegazione del progetto.
             </p>
           </details>
           <details class="faq__item">
@@ -353,6 +352,13 @@
               rel="noopener noreferrer"
               >Entra su Discord</a
             >
+            <a
+              class="btn btn--secondary"
+              href="mailto:support@formatiks.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contattaci via e-mail</a
+            >
           </div>
         </div>
       </section>
@@ -364,6 +370,13 @@
         <button type="button" class="footer__btn" data-open-projects-menu>
           I nostri progetti
         </button>
+        <span class="dot">·</span>
+        <a
+          href="mailto:support@formatiks.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >E-mail</a
+        >
         <span class="dot">·</span>
         <a
           href="https://github.com/Formatiks"
@@ -380,7 +393,7 @@
         >
       </p>
       <p class="footer__copy">
-        © <span id="year"></span> Formatiks - gruppo di studenti informatici.
+        © <span id="year"></span> Formatiks, gruppo di studenti informatici.
       </p>
     </footer>
 
