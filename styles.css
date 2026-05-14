@@ -822,7 +822,8 @@ body.menu-open {
   overflow: visible;
 }
 
-/* SVG senza viewBox: 1 unità = 1px così rx/ry = --radius-lg coincidono col bordo arrotondato della card */
+/* SVG senza viewBox: 1 unità = 1px così rx/ry = --radius-lg coincidono col bordo arrotondato della card.
+   stroke-linecap butt: con dash animato, round crea semicerchi alle estremità che agli angoli sembrano staccati dal bordo. */
 .stat__neon {
   display: block;
   position: absolute;
@@ -844,6 +845,7 @@ body.menu-open {
   height: calc(100% - 2.25px);
   rx: var(--radius-lg);
   ry: var(--radius-lg);
+  stroke-linecap: butt;
   vector-effect: non-scaling-stroke;
   shape-rendering: geometricPrecision;
   animation: stat-neon-dash 2.1s linear infinite;
