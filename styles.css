@@ -430,6 +430,39 @@ body.menu-open {
   font-size: 1.05rem;
 }
 
+/* Logo immagine in header: stessa dimensione del pulsante hamburger (44px) */
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.header-logo:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.header-logo:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+.header-logo img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
 .nav {
   display: none;
   align-items: center;
@@ -776,14 +809,57 @@ body.menu-open {
 }
 
 .stat {
+  position: relative;
+  z-index: 0;
   padding: 1.75rem 1rem;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(
     180deg,
     rgba(18, 21, 32, 0.9) 0%,
     rgba(10, 11, 16, 0.6) 100%
   );
+  overflow: visible;
+}
+
+/* SVG senza viewBox: 1 unità = 1px così rx/ry = --radius-lg coincidono col bordo arrotondato della card */
+.stat__neon {
+  display: block;
+  position: absolute;
+  inset: -1px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 3px rgba(61, 214, 245, 1))
+    drop-shadow(0 0 10px rgba(61, 214, 245, 0.65))
+    drop-shadow(0 0 20px rgba(124, 92, 255, 0.35));
+}
+
+.stat__neon-path {
+  x: 1.125px;
+  y: 1.125px;
+  width: calc(100% - 2.25px);
+  height: calc(100% - 2.25px);
+  rx: var(--radius-lg);
+  ry: var(--radius-lg);
+  vector-effect: non-scaling-stroke;
+  shape-rendering: geometricPrecision;
+  animation: stat-neon-dash 2.1s linear infinite;
+  will-change: stroke-dashoffset;
+}
+
+.stat > .stat__value,
+.stat > .stat__label {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes stat-neon-dash {
+  to {
+    stroke-dashoffset: -100;
+  }
 }
 
 .stat--wide {
@@ -1173,6 +1249,10 @@ body.menu-open {
   .noise,
   .cta__inner {
     animation: none !important;
+  }
+
+  .stat__neon-path {
+    animation: none;
   }
 
   body::before,
