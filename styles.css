@@ -822,14 +822,12 @@ body.menu-open {
   overflow: visible;
 }
 
-/* SVG senza viewBox: 1 unità = 1px così rx/ry = --radius-lg coincidono col bordo arrotondato della card.
-   stroke-linecap butt: con dash animato, round crea semicerchi alle estremità che agli angoli sembrano staccati dal bordo. */
+/* Geometria del neon (rect) impostata in JS su border-box: le proprietà CSS x/y/rx su <rect> sono inaffidabili tra browser. */
 .stat__neon {
   display: block;
   position: absolute;
-  inset: -1px;
-  width: auto;
-  height: auto;
+  right: auto;
+  bottom: auto;
   overflow: visible;
   pointer-events: none;
   z-index: 1;
@@ -839,12 +837,6 @@ body.menu-open {
 }
 
 .stat__neon-path {
-  x: 1.125px;
-  y: 1.125px;
-  width: calc(100% - 2.25px);
-  height: calc(100% - 2.25px);
-  rx: var(--radius-lg);
-  ry: var(--radius-lg);
   stroke-linecap: butt;
   vector-effect: non-scaling-stroke;
   shape-rendering: geometricPrecision;

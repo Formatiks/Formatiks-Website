@@ -66,6 +66,61 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  var STAT_NEON_STROKE = 2.25;
+
+  function parseBorderRadiusPx(value) {
+    var s = String(value || "").trim();
+    var m = s.match(/^([\d.]+)px/);
+    return m ? parseFloat(m[1]) : 0;
+  }
+
+  function layoutStatNeons() {
+    document.querySelectorAll(".stat").forEach(function (stat) {
+      var svg = stat.querySelector(".stat__neon");
+      var rect = stat.querySelector(".stat__neon-path");
+      if (!svg || !rect) return;
+      var bw = stat.offsetWidth;
+      var bh = stat.offsetHeight;
+      if (bw < 2 || bh < 2) return;
+      var cs = getComputedStyle(stat);
+      var bl = parseFloat(cs.borderLeftWidth) || 0;
+      var bt = parseFloat(cs.borderTopWidth) || 0;
+      var r = parseBorderRadiusPx(cs.borderTopLeftRadius);
+      if (!r) r = parseBorderRadiusPx(cs.borderRadius) || 20;
+      var inset = STAT_NEON_STROKE / 2;
+      var rw = Math.max(0, bw - STAT_NEON_STROKE);
+      var rh = Math.max(0, bh - STAT_NEON_STROKE);
+      var rxy = Math.min(r, rw / 2, rh / 2);
+      svg.style.left = -bl + "px";
+      svg.style.top = -bt + "px";
+      svg.style.width = bw + "px";
+      svg.style.height = bh + "px";
+      svg.setAttribute("width", String(bw));
+      svg.setAttribute("height", String(bh));
+      rect.setAttribute("x", String(inset));
+      rect.setAttribute("y", String(inset));
+      rect.setAttribute("width", String(rw));
+      rect.setAttribute("height", String(rh));
+      rect.setAttribute("rx", String(rxy));
+      rect.setAttribute("ry", String(rxy));
+    });
+  }
+
+  layoutStatNeons();
+  requestAnimationFrame(layoutStatNeons);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(layoutStatNeons);
+  }
+  window.addEventListener("resize", layoutStatNeons, { passive: true });
+  if ("ResizeObserver" in window) {
+    var statNeonRo = new ResizeObserver(function () {
+      layoutStatNeons();
+    });
+    document.querySelectorAll(".stat").forEach(function (el) {
+      statNeonRo.observe(el);
+    });
+  }
+
   var statValues = document.querySelectorAll(".stat__value[data-count]");
   if (statValues.length && "IntersectionObserver" in window) {
     function animateValue(el, target, duration) {
