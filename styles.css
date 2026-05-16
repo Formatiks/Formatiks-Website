@@ -801,6 +801,12 @@ body.menu-open {
   text-align: center;
 }
 
+@media (max-width: 699px) {
+  .stat__neon {
+    display: none !important;
+  }
+}
+
 @media (min-width: 700px) {
   .stats {
     grid-template-columns: repeat(3, 1fr);

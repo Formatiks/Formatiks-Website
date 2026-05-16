@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Server MC — SpermaCraft, server Minecraft italiano. Sito e community Formatiks."
+    />
+    <title>Server MC - Formatiks</title>
+    <link rel="icon" href="https://play.anozon.it/src/images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="progetti/progetto.css" />
+    <link rel="stylesheet" href="progetti/server-mc/server-mc.css" />
+  </head>
+  <body class="project-mc">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="site-header-bar">
+      <header class="site-header">
+        <div class="header-start">
+          <button
+            type="button"
+            class="hamburger"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="projects-menu"
+            aria-label="Apri menu progetti"
+          >
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+            <span class="hamburger__bar" aria-hidden="true"></span>
+          </button>
+          <a class="header-logo" href="index.html" aria-label="Formatiks — home"
+            ><img src="formatiks.png" width="44" height="44" alt=""
+          /></a>
+        </div>
+        <nav class="nav" aria-label="Navigazione principale">
+          <a href="index.html#features">Cosa facciamo</a>
+          <a href="index.html#why">Perché Formatiks</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#resources">Risorse</a>
+          <button type="button" class="nav__btn" data-open-projects-menu>I nostri progetti</button>
+        </nav>
+      </header>
+    </div>
+
+    <div class="menu-drawer" id="projects-menu" aria-hidden="true" inert>
+      <button type="button" class="menu-drawer__backdrop" data-menu-close tabindex="-1" aria-label="Chiudi menu"></button>
+      <nav class="menu-drawer__panel" aria-label="I nostri progetti">
+        <p class="menu-drawer__title" id="menu-projects-title">I nostri progetti</p>
+        <ul class="menu-drawer__list">
+          <li class="menu-drawer__item" style="--i: 0">
+            <a class="menu-drawer__link" href="progetti/pulse/index.html">Pulse</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 1">
+            <a class="menu-drawer__link" href="progetti/sportpredix/index.html">SportPredix</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 2">
+            <a class="menu-drawer__link" href="progetti/anozon/index.html">Anozon</a>
+          </li>
+          <li class="menu-drawer__item" style="--i: 3">
+            <a class="menu-drawer__link" href="progetti/server-mc/index.html">Server MC</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="project-page">
+      <a class="back-link" href="index.html">Torna alla home</a>
+
+      <header class="project-hero">
+        <img
+          class="mc-hero__logo"
+          src="https://play.anozon.it/src/images/logo.png"
+          width="140"
+          height="140"
+          alt="Logo SpermaCraft"
+        />
+        <p class="project-hero__eyebrow">
+          Minecraft · Community
+        </p>
+        <div class="mc-symbols" aria-hidden="true">
+          <img
+            class="mc-icon mc-icon--symbol"
+            src="progetti/server-mc/textures/grass_block_side.png"
+            width="24"
+            height="24"
+            alt=""
+          />
+          <img
+            class="mc-icon mc-icon--symbol"
+            src="progetti/server-mc/textures/dirt.png"
+            width="24"
+            height="24"
+            alt=""
+          />
+          <img
+            class="mc-icon mc-icon--symbol"
+            src="progetti/server-mc/textures/stone.png"
+            width="24"
+            height="24"
+            alt=""
+          />
+          <img
+            class="mc-icon mc-icon--symbol"
+            src="progetti/server-mc/textures/diamond.png"
+            width="24"
+            height="24"
+            alt=""
+          />
+        </div>
+        <h1 class="project-hero__title">Server MC</h1>
+        <p class="project-hero__lead">
+          Il portale del server <strong>SpermaCraft</strong>, rinnovato dal team Formatiks:
+          stesso spirito competitivo e community del sito su
+          <a href="https://play.anozon.it/" target="_blank" rel="noopener noreferrer">play.anozon.it</a>,
+          con un&apos;interfaccia allineata al resto dei nostri progetti.
+        </p>
+
+        <div class="mc-connect">
+          <button type="button" class="mc-ip" id="mc-copy-ip" aria-label="Copia IP mc.anozon.it">
+            <img
+              class="mc-icon mc-icon--ip"
+              src="progetti/server-mc/textures/iron_pickaxe.png"
+              width="28"
+              height="28"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="mc-ip__body">
+            <span class="mc-ip__hint">Premi per copiare l&apos;IP</span>
+            <span class="mc-ip__addr" id="mc-ip-addr">mc.anozon.it</span>
+            <span class="mc-ip__status" id="mc-players">Caricamento giocatori…</span>
+            </span>
+          </button>
+          <a
+            class="mc-discord-pill"
+            href="https://discord.gg/gWDVDuJfmN"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="mc-icon mc-icon--discord-pill"
+              src="progetti/server-mc/textures/discord.svg"
+              width="24"
+              height="24"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="mc-discord-pill__text">
+            <span class="mc-discord-pill__label">Entra nel nostro Discord</span>
+            <span class="mc-discord-pill__count" id="mc-discord-count">Caricamento…</span>
+            </span>
+          </a>
+        </div>
+      </header>
+
+      <section class="project-section">
+        <h2>Link utili</h2>
+        <ul class="mc-links">
+          <li>
+            <a href="https://play.anozon.it/" target="_blank" rel="noopener noreferrer">
+              <strong
+                ><img
+                  class="mc-icon mc-icon--link"
+                  src="progetti/server-mc/textures/stone.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />Home server</strong
+              >
+              <span>Sito ufficiale SpermaCraft</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://mc.anozon.it:8080/" target="_blank" rel="noopener noreferrer">
+              <strong
+                ><img
+                  class="mc-icon mc-icon--link"
+                  src="progetti/server-mc/textures/filled_map.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />Mappa</strong
+              >
+              <span>Esplora il mondo in bluemap</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="mc-links__store"
+              href="https://ez.anozon.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong
+                ><img
+                  class="mc-icon mc-icon--link"
+                  src="progetti/server-mc/textures/emerald.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />Store</strong
+              >
+              <span>Supporta il server</span>
+            </a>
+          </li>
+          <li>
+            <a class="mc-links__discord" href="https://discord.gg/gWDVDuJfmN" target="_blank" rel="noopener noreferrer">
+              <strong
+                ><img
+                  class="mc-icon mc-icon--link mc-icon--discord"
+                  src="progetti/server-mc/textures/discord.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />Discord</strong
+              >
+              <span>Chat, annunci e staff</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://play.anozon.it/staff" target="_blank" rel="noopener noreferrer">
+              <strong
+                ><img
+                  class="mc-icon mc-icon--link"
+                  src="progetti/server-mc/textures/golden_sword.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />Staff</strong
+              >
+              <span>Team e moderazione</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@anozon.it">
+              <strong
+                ><img
+                  class="mc-icon mc-icon--link"
+                  src="progetti/server-mc/textures/writable_book.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />Contattaci</strong
+              >
+              <span>support@anozon.it</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2>Chi siamo</h2>
+        <p>
+          SpermaCraft nasce nel 2025, dando agli amanti di Minecraft la possibilit&agrave; di
+          divertirsi in un nuovo ecosistema che andasse oltre le quattro mura di casa.
+          Adesso SpermaCraft &egrave; tra i server pi&ugrave; giocati in Italia e tra i pi&ugrave;
+          amati per coloro a cui piace della sana competizione.
+        </p>
+        <p>
+          <strong>Server MC</strong> &egrave; la scheda progetto Formatiks dedicata a questo mondo:
+          qui trovi IP, link rapidi e il collegamento al sito storico, mentre continuiamo a
+          curare esperienza web e community insieme al gruppo.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>Perch&eacute; giocare con noi</h2>
+        <ul class="project-list">
+          <li>
+            <strong>Competizione sana</strong> &mdash; modalit&agrave; e eventi pensati per chi
+            ama migliorarsi senza perdere il divertimento.
+          </li>
+          <li>
+            <strong>Community attiva</strong> &mdash; Discord sempre vivo, staff reperibile e
+            aggiornamenti dal team.
+          </li>
+          <li>
+            <strong>Ecosistema completo</strong> &mdash; mappa live, store e portale web
+            integrati nello stesso progetto.
+          </li>
+        </ul>
+      </section>
+
+      <div class="mc-banner">
+        <p class="mc-banner__title">Spermaci</p>
+        <p>
+          Regalati un&apos;emozione unica supportando il tuo server preferito: ogni acquisto
+          sullo store aiuta a mantenere online l&apos;esperienza per tutti.
+        </p>
+        <a class="btn btn--primary" href="https://ez.anozon.it/" target="_blank" rel="noopener noreferrer"
+          >Vai allo Store</a
+        >
+      </div>
+
+      <div class="project-actions">
+        <a class="btn btn--primary" href="https://play.anozon.it/" target="_blank" rel="noopener noreferrer"
+          >Apri play.anozon.it</a
+        >
+        <a
+          class="btn btn--secondary"
+          href="https://discord.gg/gWDVDuJfmN"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Entra su Discord</a
+        >
+      </div>
+
+      <p class="mc-footnote">
+        <a href="https://play.anozon.it/" target="_blank" rel="noopener noreferrer">SpermaCraft</a>
+        &copy; 2025 &middot; Non siamo affiliati con Mojang AB.
+      </p>
+    </main>
+
+    <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+    <script src="main.js"></script>
+    <script src="progetti/server-mc/server-mc.js"></script>
+  </body>
+</html>
