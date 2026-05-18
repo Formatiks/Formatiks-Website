@@ -6,6 +6,15 @@
   padding: 1.25rem 1.5rem 4rem;
 }
 
+.project-logo {
+  display: block;
+  width: min(200px, 36vw);
+  height: auto;
+  margin: 0 auto 1.25rem;
+  border-radius: 4px;
+/*  border: 3px solid rgba(93, 186, 74, 0.45); */
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -46,11 +55,12 @@
   font-size: clamp(2.25rem, 6vw, 3.5rem);
   line-height: 1.08;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .project-hero__lead {
   margin: 1rem 0 0;
-  max-width: 40rem;
+  text-align: center;
   font-size: 1.1rem;
   color: var(--muted);
 }
@@ -98,6 +108,7 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .project-section code {
